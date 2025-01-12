@@ -1,0 +1,145 @@
+.page2-featured-health-checkups-container{
+    background-color: #E8F2FE;;
+    padding:3px;
+}
+.page2-header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page2-heading1{
+    color: #050A4E;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.page2-view-all-button{
+    color:#050A4E;
+    background-color: transparent;
+    border:none;
+    color: #1778F2;
+    font-weight:bold;
+}
+
+.page2-list-container{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left:0;
+}
+
+
+.page2-list-item{
+    margin:3px;
+    padding-left:0;
+}
+
+.page2-category-button{
+    width:max-content;
+    border-width:0;
+    border-radius:5px;
+    font-weight:bold;
+    height:40px;
+    font-size:12px;
+    background-color: white;
+}
+
+.page2-category-button.active{
+    color: #1778F2;
+    font-weight:bold;
+    border:1px solid #1778F2;
+    border-radius:5px;
+    padding:5px;
+}
+
+.page2-package-list-item{
+    padding-left:0;
+    height:350px;
+    padding:15px;
+}
+
+.page2-package-item-container{
+    width:280px;
+    background-color: white;
+    border-radius:15px;
+    margin:5px;
+    padding:8px;
+    height:300px;
+}
+
+.page2-list-heading{
+    font-size: 16px;
+    color:#050A4E;
+    font-weight:bold;
+}
+
+.page2-list-paragraph{
+    font-size: 12px;
+    margin-left:5px;
+    margin-bottom:0;
+    color:#1778F2;
+}
+
+.page2-list-tests{
+    font-size:12px;
+    margin-bottom:0;
+    color: #050A4E;
+}
+
+.page2-list-test-summary{
+    font-size:10px;
+    margin-bottom: 0;
+    margin-left:5px;
+}
+
+.page2-flex-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:100%;
+    margin-top:10px;
+}
+
+.sponsored-item{
+    position:relative;
+    color:white;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: red;
+    width:150px;
+    text-align: center;
+    padding:3px;
+    margin-top: 0;
+    padding-top:0;
+}
+
+.page2-bottom-tags{
+    position:relative;
+    bottom:0;
+    top:20px;
+    background-color: #1778F2;
+    color:white;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    font-size:12px;
+    text-align: center;
+}
+
+.page2-fasting-availability{
+    background-color:#F8F8F8;
+    display: flex;
+    justify-content: space-around;
+}
+
+.page2-stopwatch-icon-container{
+    display: flex;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}

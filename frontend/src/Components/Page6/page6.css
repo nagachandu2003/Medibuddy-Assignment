@@ -1,0 +1,32 @@
+.page6-heading{
+    font-size:15px;
+    color:#050A4E;
+}
+.page6-list-container{
+    list-style-type: none;
+    padding-left: 0;
+    padding:5px;
+    margin:auto;
+}
+
+@media (min-width:768px){
+    .page6-list-container{
+        width:90%;
+    }
+}
+
+.page6-question{
+    color: #2E3742;
+    font-weight:600;
+}
+
+.page6-question-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.page6-plus-button{
+    background-color: transparent;
+    border:none;
+}
