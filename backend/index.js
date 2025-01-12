@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
@@ -9,7 +10,10 @@ const fs = require("fs");
 app.use(express.json());
 app.use(cors());
 
-const data =  JSON.parse(fs.readFileSync("./data.json","utf-8"))[0]["page_config"];
+const data =  JSON.parse(fs.readFileSync(path.resolve(__dirname, "data.json"),"utf-8"))[0]["page_config"];
+
+
+
 
 // API 1 : 
 app.get("/page1", async (req,res) => {
