@@ -14,12 +14,15 @@ const data =  JSON.parse(fs.readFileSync(path.resolve(__dirname, "data.json"),"u
 
 
 
+app.get("/", (req,res) => {
+    res.status(200).json("Hello World");
+})
 
 // API 1 : 
 app.get("/page1", async (req,res) => {
     const page1Images1 = data.filter((ele) => ele.id==="1");
     const page1Images2 = data.filter((ele) => ele.id==="2");
-    res.json({page1Images1,page1Images2});
+    res.status(200).json({page1Images1,page1Images2});
 });
 
 app.get("/page2", async (req,res) => {
@@ -27,7 +30,7 @@ app.get("/page2", async (req,res) => {
     const {categories,props} = page2data;
     const healthCheckupPackages = props[0].packages;
     const categoryArray = categories["10386"]
-    res.json({categoryArray,healthCheckupPackages});
+    res.status(200).json({categoryArray,healthCheckupPackages});
 })
 
 app.get("/gethealthcheckpackages", async (req,res) => {
@@ -36,7 +39,7 @@ app.get("/gethealthcheckpackages", async (req,res) => {
     healthcheckpackages = healthcheckpackages.map((ele) => {
         return {...ele,imgSrc : `https://medibuddy.in/${ele.imgSrc}`}
     })
-    res.json({healthcheckpackages:healthcheckpackages});
+    res.status(200).json({healthcheckpackages:healthcheckpackages});
 })
 
 app.get("/bookhealthpackages", async (req,res) => {
@@ -44,7 +47,7 @@ app.get("/bookhealthpackages", async (req,res) => {
     result = result.map((ele) => {
         return {...ele,imgSrc : `https://medibuddy.in${ele.imgSrc}`}
     })
-    res.json({healthpackages:result})
+    res.status(200).json({healthpackages:result})
 })
 
 app.get("/whatouruserssay", async (req,res) => {
@@ -53,7 +56,7 @@ app.get("/whatouruserssay", async (req,res) => {
     result = result.map((ele) => {
         return {...ele,imgSrc : `https://medibuddy.in/${ele.imgSrc}`}
     })
-    res.json({whatouruserssay:result,features:result2})
+    res.status(200).json({whatouruserssay:result,features:result2})
 })
 
 app.get("/howitworks", async (req,res) => {
@@ -61,7 +64,7 @@ app.get("/howitworks", async (req,res) => {
     result = result.map((ele) => {
         return {...ele,img : `https://medibuddy.in${ele.img}`}
     })
-    res.json({howitworks:result});
+    res.status(200).json({howitworks:result});
 })
 
 app.get("/faqs", async (req,res) => {
@@ -69,7 +72,7 @@ app.get("/faqs", async (req,res) => {
     let newarray = []
     for(let i=1; i<result.length;i++)
         newarray = [...newarray,result[i]]
-    res.json({faqs:newarray});
+    res.status(200).json({faqs:newarray});
 })
 
 app.use((err,req,res) => {
